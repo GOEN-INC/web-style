@@ -1,0 +1,4245 @@
+/*
+	 カスタムCSS
+*/
+
+
+/*------------------------------------------------------------
+ごえんカスタム
+-------------------------------------------------------------*/
+
+.nowrap p,.nowrap h1,.nowrap h2,.nowrap h3,.nowrap h4,.nowrap h5,h3.nowrap{
+  white-space: nowrap;
+}
+
+.palt p,.palt h1,.palt h2,.palt h3,.palt h4,.palt h5,h3.palt{
+font-feature-settings: "palt";
+}
+
+.nodisplay{
+  display: none;
+}
+
+/*------------------------------------------------------------
+マークアップ: HTML タグとフォーマット
+-------------------------------------------------------------*/
+
+
+/* 固定ページ */
+
+#PageTemplate h1,
+#PageTemplate h2,
+#PageTemplate h3,
+#PageTemplate h4,
+#PageTemplate h5,
+#PageTemplate h6 {
+  margin-top: 2.5em;
+  color: #444444;
+}
+
+#PageTemplate h1{
+  font-size: 2.0rem;
+}
+#PageTemplate h2{
+  font-size: 2.0rem;
+}
+#PageTemplate h3{
+  font-size: 1.5rem;
+}
+#PageTemplate h4{
+  font-size: 1.4rem;
+}
+#PageTemplate h5{
+  font-size: 1.35rem;
+}
+
+#PageTemplate ul + p{
+  margin-bottom: 20px;
+}
+
+
+/* 〜768px：SP横
+------------------------------ */
+@media screen and (max-width:768px) {
+
+  #PageTemplate h1{
+    font-size: 1.25rem;
+  }
+
+  #PageTemplate h2{
+    font-size: 1.2em;
+  }
+
+  #PageTemplate h3{
+    font-size: 1.18rem;
+  }
+
+  #PageTemplate h4{
+    font-size: 1.15em;
+  }
+
+  #PageTemplate h5{
+    font-size: 1.10em;
+  }
+
+}
+
+
+
+/* 見出し (Index)  */
+
+#mainContents h1,
+#mainContents h2,
+#mainContents h3,
+#mainContents h4,
+#mainContents h5,
+#mainContents h6 {
+  margin-top: 2.5em;
+  color: #444444;
+}
+
+#mainContents h1{
+  font-size: 2.0rem;
+}
+#mainContents h2{
+  position: relative;
+  border: none;
+  font-size: 1.25em;
+  padding: 1em 1.1em;
+  margin-bottom: 1em;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #191919;
+  color: #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .0);
+}
+#mainContents h3{
+  font-size: 1.5rem;
+}
+#mainContents h4{
+  font-size: 1.4rem;
+}
+#mainContents h5{
+  font-size: 1.35rem;
+}
+
+/* 〜768px：SP横
+------------------------------ */
+@media screen and (max-width:768px) {
+
+  #mainContents h1{
+    font-size: 1.25rem;
+  }
+
+  #mainContents h2{
+    font-size: 1.2em;
+  }
+
+  #mainContents h3{
+    font-size: 1.18rem;
+  }
+
+  #mainContents h4{
+    font-size: 1.15em;
+  }
+
+  #mainContents h5{
+    font-size: 1.10em;
+  }
+
+}
+
+
+/* 定義リスト(dl dt dd)  */
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+dl dt {
+  width: 30%;
+  margin: 0;
+  padding: 10px;
+}
+dl dd {
+  width: 70%;
+  margin: 0;
+  padding: 10px;
+}
+
+/* 箇条書きリスト（ul li)  */
+
+main ul {
+  list-style: circle;
+  padding: 0;
+  margin: 0 30px;
+}
+
+main ol {
+  padding: 0;
+  margin: 0 30px;
+}
+
+main li {
+  margin-top: 0.5em;
+  padding-left: 0em;
+  position: relative;
+}
+
+/* ネストされたリスト用のスタイル */
+main ul ul,main ol ol {
+  margin-top: 0.5em;
+  margin-left: 2em;
+}
+
+/* リストマーカーのスタイル */
+main li:before {
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  main li {
+    padding-left: 0em;
+  }
+  main ul ul, main ol ol {
+    margin-left: 1.5em;
+  }
+}
+
+
+
+/* 引用 (Blockquote)  */
+
+blockquote {
+	font-size: 0.95em;
+	padding: 6% 4% 2%;
+	margin: 2.5em 0 3em;
+	position: relative;
+	border: 1px solid;
+	opacity: .8;
+	filter: alpha(opacity=80);
+	-ms-filter: "alpha(opacity=90)";
+}
+
+blockquote:before,
+blockquote:after{
+	font-family: 'FontAwesome';
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	display: block;
+	padding: .2em;
+	text-align: center;
+	font-size: 1.3em;
+	line-height: 1;
+	background: #fff;
+}
+
+blockquote:before {
+  content: '\f10d';
+  left: -0.1em;
+  top: -0.6em;
+  background: #ffffff;
+}
+
+blockquote:after {
+  content: '\f10e';
+  right: 0.2em;
+  bottom: -0.3em;
+  background: #ffffff;
+}
+
+blockquote p {
+  position: relative;
+  padding: 0;
+  margin: 10px 0;
+  z-index: 3;
+  line-height: 1.7;
+}
+
+blockquote cite {
+  display: block;
+  text-align: right;
+  color: #888888;
+  font-size: 0.9em;
+}
+
+
+/* codeタグ */
+
+code {
+  display: inline-block;
+  padding: 0em 0.5em;
+  background-color: #e7edf3;
+  border-radius: 3px;
+}
+
+
+/*------------------------------------------------------------
+Rank Math SEO
+-------------------------------------------------------------*/
+#rank-math-toc{
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  padding: 1em 1em 1.8em 1em;
+  border: 1px solid #999;
+  background-color: #f7f7f7;
+  }
+#rank-math-toc a{
+  color:#555555;
+  }
+#rank-math-toc h2{
+    position: relative;
+    border: none;
+    font-size: 1.0em;
+    padding: 0em 0.6em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: transparent;
+    color: #191919;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .0);
+  }
+#rank-math-toc a:hover{
+    filter: alpha(opacity=70);  
+	  /* 以下、ゆっくりフェードインさせる設定 */
+	  -webkit-transition: 0.5s ease-in-out;  
+       -moz-transition: 0.5s ease-in-out;  
+	  -o-transition: 0.5s ease-in-out;  
+	  transition: 0.5s ease-in-out;
+    color:#0070FF;
+    }
+
+#rank-math-toc ul {
+    list-style-type: decimal;
+    }
+
+#rank-math-toc li {
+  font-weight: bold;
+  font-size:15px;
+  color:#555555;
+  }
+
+#rank-math-toc li li {
+  font-weight: normal;
+  font-size:13px;
+  }
+
+#rank-math-toc li li::before {
+  border-bottom: solid 2px;
+  border-left: solid 0px;
+  }
+
+
+/*------------------------------------------------------------
+スマホサイズのみ電話番号リンクを表示
+-------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+/*------------------------------------------------------------
+カスタマイズ
+-------------------------------------------------------------*/
+
+.flex {
+  display: flex; /*最新のブラウザ*/
+  display: -webkit-box; /*レガシーCC*/
+  display: -webkit-flex; /*Android2.3*/
+  display: -ms-flexbox; /*IE9~用*/
+}
+
+/*------------------------------------------------------------
+SVGのアニメーション
+-------------------------------------------------------------*/
+
+/* スクロールで固定アニメーションする設定
+------------------------------ */
+
+.fadein .a {
+  stroke: #231815;
+  stroke-width: 1px;
+  fill: transparent;
+  stroke-dasharray: 3607.929px; /* イラストレーターのドキュメント情報で外周を算出 */
+  stroke-dashoffset: 3607.929px;
+  animation: anim 4s ease-in 0s forwards;
+  animation-delay: 1.7s;
+}
+
+@keyframes anim {
+  0% {
+    stroke-dashoffset: 3607.929px;
+  }
+  30% {
+    fill: transparent;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: #eeeeee;
+  }
+  90% {
+    stroke-dashoffset: 0;
+    fill: #ffffff;
+    stroke-width: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #ffffff;
+    stroke-width: 0px;
+  }
+}
+
+/*------------------------------------------------------------
+背景切り替えアニメーション
+-------------------------------------------------------------*/
+
+.home .bgchange .mainvisual {
+  animation: bgchange 5s ease-in 0s forwards;
+}
+
+@keyframes bgchange {
+  0% {
+    background: #644c33;
+  }
+  30% {
+  }
+  90% {
+    background: #fdf9f6;
+  }
+  100% {
+    background: #fdf9f6;
+  }
+}
+
+/*------------------------------------------------------------
+スクロールアニメーション設定
+-------------------------------------------------------------*/
+
+.fade-type-scale_10 {
+  transform: scale(1);
+  opacity: 0;
+  margin-bottom: 0px;
+}
+
+.fade-type-scale_09 {
+  transform: scale(0.9);
+  opacity: 0;
+  margin-bottom: 0px;
+}
+
+.fade-type-scale_X-10 {
+  transform: translateY(-40px);
+  opacity: 0;
+  margin-bottom: 0px;
+}
+
+.fade-type-scale_X10 {
+  transform: translateY(40px);
+  opacity: 0;
+  margin-bottom: 0px;
+}
+
+.fade-type-scale_Y-10 {
+  transform: translateY(-20px);
+  opacity: 0;
+  margin-bottom: 0px;
+}
+
+.fade-type-scale:last-of-type {
+  margin-bottom: 0;
+}
+
+.fade-scale {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-scale-xy {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*以下フェードイン表示の指定*/
+.fadein {
+  opacity: 0;
+  animation: fadein_a 1s ease forwards;
+  transform: translateY(-10px);
+}
+
+.fadein02 {
+  opacity: 0;
+  animation: fadein_b 2s ease forwards;
+  transform: translateY(0px);
+}
+
+.fadein03 {
+  opacity: 0;
+  animation: fadein_c 2s ease forwards;
+  transform: translateY(0px);
+}
+
+@keyframes fadein_a {
+  100% {
+    opacity: 1;
+    transform: translateY(-0px);
+  }
+}
+
+@keyframes fadein_b {
+  100% {
+    opacity: 1;
+    transform: translateY(-0px);
+  }
+}
+
+@keyframes fadein_c {
+  100% {
+    opacity: 0.8;
+    transform: translateY(-0px);
+  }
+}
+
+/*以下遅延の指定*/
+.anime00 {
+  animation-delay: 0s;
+}
+.anime01 {
+  animation-delay: 0.5s;
+}
+.anime02 {
+  animation-delay: 1s;
+}
+.anime03 {
+  animation-delay: 1.5s;
+}
+.anime04 {
+  animation-delay: 1.7s;
+}
+.anime05 {
+  animation-delay: 2.5s;
+}
+.anime06 {
+  animation-delay: 3s;
+}
+.anime07 {
+  animation-delay: 3.5s;
+}
+
+/*------------------------------------------------------------
+グーグルマップレスポンシブ
+-------------------------------------------------------------*/
+
+.googlemap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.googlemap iframe,
+.googlemap object,
+.googlemap embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------
+// SNS ICON
+--------- */
+
+/* CSS */
+
+/* 回り込み解除のためのクラス */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+/* サークルのスタイル */
+.sns_circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #999;
+  float: left;
+  list-style: none;
+}
+
+/* Webフォントに関する指定 */
+.sns_circle span {
+  position: absolute;
+  padding: 10px;
+  font-size: 1.6em;
+  color: #fff; /* 文字の色 */
+}
+
+/* リンク領域をブロック全体に */
+.sns_circle a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-indent: -999px;
+  color: #fff; /* 文字の色 */
+}
+
+/* マウスオーバー */
+.sns_circle a:hover {
+  background-color: #fff;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+/* 横幅を300pxに固定して真ん中に表示 */
+ul.circle_group {
+  justify-content: center;
+  width: auto;
+  margin: auto auto 3em;
+  list-style: none;
+  padding: 0;
+}
+
+/* アイコン毎の配色と配置 */
+.sns_circle.feedly {
+  background-color: #6cc655;
+}
+
+.sns_circle.facebook {
+  background-color: #265a96;
+}
+
+.sns_circle.twitter {
+  background-color: #00acec;
+}
+
+.sns_circle.hatebu {
+  background-color: #006fbb;
+}
+
+.sns_circle.pocket {
+  background-color: #ee4256;
+}
+
+.sns_circle.googleplus {
+  background-color: #dd4b39;
+}
+
+.sns_circle.line {
+  background-color: #2cbf13;
+}
+
+.sns_circle.feed {
+  background-color: #ff9900;
+}
+
+.sns_circle.youtube {
+  background-color: #e22d26;
+}
+
+/*------------------------------------------------------------
+横幅による表示・非表示
+-------------------------------------------------------------*/
+
+.visible-lg,
+.visible-md,
+.visible-sm,
+.visible-xs {
+  display: none !important;
+}
+
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .visible-xs {
+    display: block !important;
+  }
+
+  table.visible-xs {
+    display: table;
+  }
+
+  tr.visible-xs {
+    display: table-row !important;
+  }
+
+  td.visible-xs,
+  th.visible-xs {
+    display: table-cell !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .visible-xs-block {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .visible-xs-inline {
+    display: inline !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .visible-xs-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm {
+    display: block !important;
+  }
+
+  table.visible-sm {
+    display: table;
+  }
+
+  tr.visible-sm {
+    display: table-row !important;
+  }
+
+  td.visible-sm,
+  th.visible-sm {
+    display: table-cell !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm-inline {
+    display: inline !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md {
+    display: block !important;
+  }
+
+  table.visible-md {
+    display: table;
+  }
+
+  tr.visible-md {
+    display: table-row !important;
+  }
+
+  td.visible-md,
+  th.visible-md {
+    display: table-cell !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md-inline {
+    display: inline !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .visible-lg {
+    display: block !important;
+  }
+
+  table.visible-lg {
+    display: table;
+  }
+
+  tr.visible-lg {
+    display: table-row !important;
+  }
+
+  td.visible-lg,
+  th.visible-lg {
+    display: table-cell !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .visible-lg-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .visible-lg-inline {
+    display: inline !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .visible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+
+.visible-print {
+  display: none !important;
+}
+
+@media print {
+  .visible-print {
+    display: block !important;
+  }
+
+  table.visible-print {
+    display: table;
+  }
+
+  tr.visible-print {
+    display: table-row !important;
+  }
+
+  td.visible-print,
+  th.visible-print {
+    display: table-cell !important;
+  }
+}
+
+.visible-print-block {
+  display: none !important;
+}
+
+@media print {
+  .visible-print-block {
+    display: block !important;
+  }
+}
+
+.visible-print-inline {
+  display: none !important;
+}
+
+@media print {
+  .visible-print-inline {
+    display: inline !important;
+  }
+}
+
+.visible-print-inline-block {
+  display: none !important;
+}
+
+@media print {
+  .visible-print-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+}
+
+/*------------------------------------------------------------
+iOSでのデフォルトスタイルをリセット
+-------------------------------------------------------------*/
+
+* {
+  -webkit-appearance: none;
+}
+
+input,
+button,
+select,
+textarea,
+number {
+  -webkit-appearance: none;
+}
+
+/* Reset input[type="search"] */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+input[type="search"]:focus {
+  outline-offset: -2px;
+}
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+
+/*------------------------------------------------------------
+font-size・・・フォントのサイズ
+-------------------------------------------------------------*/
+
+.f09 {
+  font-size: 0.9rem !important;
+}
+.f10 {
+  font-size: 1rem !important;
+}
+.f11 {
+  font-size: 1.1rem !important;
+}
+.f12 {
+  font-size: 1.2rem !important;
+}
+.f13 {
+  font-size: 1.3rem !important;
+}
+.f14 {
+  font-size: 1.4rem !important;
+}
+.f15 {
+  font-size: 1.5rem !important;
+}
+.f16 {
+  font-size: 1.6rem !important;
+}
+.f17 {
+  font-size: 1.7rem !important;
+}
+.f18 {
+  font-size: 1.8rem !important;
+}
+.f19 {
+  font-size: 1.9rem !important;
+}
+.f20 {
+  font-size: 2rem !important;
+}
+.f21 {
+  font-size: 2.1rem !important;
+}
+.f22 {
+  font-size: 2.2rem !important;
+}
+.f23 {
+  font-size: 2.3rem !important;
+}
+.f24 {
+  font-size: 2.4rem !important;
+}
+.f25 {
+  font-size: 2.5rem !important;
+}
+.f26 {
+  font-size: 2.6rem !important;
+}
+.f27 {
+  font-size: 2.7rem !important;
+}
+.f28 {
+  font-size: 2.8rem !important;
+}
+.f29 {
+  font-size: 2.9rem !important;
+}
+.f30 {
+  font-size: 3rem !important;
+}
+.f31 {
+  font-size: 3.1rem !important;
+}
+.f32 {
+  font-size: 3.2rem !important;
+}
+.f33 {
+  font-size: 3.3rem !important;
+}
+.f34 {
+  font-size: 3.4rem !important;
+}
+.f35 {
+  font-size: 3.5rem !important;
+}
+.f40 {
+  font-size: 4rem !important;
+}
+.f45 {
+  font-size: 4.5rem !important;
+}
+.f120 {
+  font-size: 120% !important;
+}
+.f150 {
+  font-size: 150% !important;
+}
+
+@media (max-width: 767px) {
+  .f09 {
+    font-size: 0.9rem !important;
+  }
+  .f10 {
+    font-size: 1rem !important;
+  }
+  .f11 {
+    font-size: 1.1rem !important;
+  }
+  .f12 {
+    font-size: 1.2rem !important;
+  }
+  .f13 {
+    font-size: 1.3rem !important;
+  }
+  .f14 {
+    font-size: 1.4rem !important;
+  }
+  .f15 {
+    font-size: 1.5rem !important;
+  }
+  .f16 {
+    font-size: 1.6rem !important;
+  }
+  .f17 {
+    font-size: 1.7rem !important;
+  }
+  .f18 {
+    font-size: 1.8rem !important;
+  }
+  .f19 {
+    font-size: 1.9rem !important;
+  }
+  .f20 {
+    font-size: 2rem !important;
+  }
+  .f21 {
+    font-size: 2rem !important;
+  }
+  .f22 {
+    font-size: 2rem !important;
+  }
+  .f23 {
+    font-size: 2rem !important;
+  }
+  .f24 {
+    font-size: 2rem !important;
+  }
+  .f25 {
+    font-size: 2rem !important;
+  }
+  .f26 {
+    font-size: 2rem !important;
+  }
+  .f27 {
+    font-size: 2rem !important;
+  }
+  .f28 {
+    font-size: 2rem !important;
+  }
+  .f29 {
+    font-size: 2rem !important;
+  }
+  .f30 {
+    font-size: 2rem !important;
+  }
+  .f31 {
+    font-size: 2.1rem !important;
+  }
+  .f32 {
+    font-size: 2.2rem !important;
+  }
+  .f33 {
+    font-size: 2.3rem !important;
+  }
+  .f34 {
+    font-size: 2.4rem !important;
+  }
+  .f35 {
+    font-size: 2.5rem !important;
+  }
+  .f40 {
+    font-size: 3rem !important;
+  }
+  .f45 {
+    font-size: 3.5rem !important;
+  }
+}
+
+
+/*------------------------------------------------------------
+font-size・・・フォントのサイズ em基準
+-------------------------------------------------------------*/
+
+.ff09 {
+  font-size: 0.9em !important;
+}
+.ff10 {
+  font-size: 1em !important;
+}
+.ff11 {
+  font-size: 1.1em !important;
+}
+.ff12 {
+  font-size: 1.2em !important;
+}
+.ff13 {
+  font-size: 1.3em !important;
+}
+.ff14 {
+  font-size: 1.4em !important;
+}
+.ff15 {
+  font-size: 1.5em !important;
+}
+.ff16 {
+  font-size: 1.6em !important;
+}
+.ff17 {
+  font-size: 1.7em !important;
+}
+.ff18 {
+  font-size: 1.8em !important;
+}
+.ff19 {
+  font-size: 1.9em !important;
+}
+.ff20 {
+  font-size: 2em !important;
+}
+.ff21 {
+  font-size: 2.1em !important;
+}
+.ff22 {
+  font-size: 2.2em !important;
+}
+.ff23 {
+  font-size: 2.3em !important;
+}
+.ff24 {
+  font-size: 2.4em !important;
+}
+.ff25 {
+  font-size: 2.5em !important;
+}
+.ff26 {
+  font-size: 2.6em !important;
+}
+.ff27 {
+  font-size: 2.7em !important;
+}
+.ff28 {
+  font-size: 2.8em !important;
+}
+.ff29 {
+  font-size: 2.9em !important;
+}
+.ff30 {
+  font-size: 3em !important;
+}
+.ff31 {
+  font-size: 3.1em !important;
+}
+.ff32 {
+  font-size: 3.2em !important;
+}
+.ff33 {
+  font-size: 3.3em !important;
+}
+.ff34 {
+  font-size: 3.4em !important;
+}
+.ff35 {
+  font-size: 3.5em !important;
+}
+.ff40 {
+  font-size: 4em !important;
+}
+.ff45 {
+  font-size: 4.5em !important;
+}
+.ff120 {
+  font-size: 120% !important;
+}
+.ff150 {
+  font-size: 150% !important;
+}
+
+@media (max-width: 767px) {
+  .ff09 {
+    font-size: 0.9em !important;
+  }
+  .ff10 {
+    font-size: 1em !important;
+  }
+  .ff11 {
+    font-size: 1.1em !important;
+  }
+  .ff12 {
+    font-size: 1.2em !important;
+  }
+  .ff13 {
+    font-size: 1.3em !important;
+  }
+  .ff14 {
+    font-size: 1.4em !important;
+  }
+  .ff15 {
+    font-size: 1.5em !important;
+  }
+  .ff16 {
+    font-size: 1.6em !important;
+  }
+  .ff17 {
+    font-size: 1.7em !important;
+  }
+  .ff18 {
+    font-size: 1.8em !important;
+  }
+  .ff19 {
+    font-size: 1.9em !important;
+  }
+  .ff20 {
+    font-size: 2em !important;
+  }
+  .ff21 {
+    font-size: 2em !important;
+  }
+  .ff22 {
+    font-size: 2em !important;
+  }
+  .ff23 {
+    font-size: 2em !important;
+  }
+  .ff24 {
+    font-size: 2em !important;
+  }
+  .ff25 {
+    font-size: 2em !important;
+  }
+  .ff26 {
+    font-size: 2em !important;
+  }
+  .ff27 {
+    font-size: 2em !important;
+  }
+  .ff28 {
+    font-size: 2em !important;
+  }
+  .ff29 {
+    font-size: 2em !important;
+  }
+  .ff30 {
+    font-size: 2em !important;
+  }
+  .ff31 {
+    font-size: 2.1em !important;
+  }
+  .ff32 {
+    font-size: 2.2em !important;
+  }
+  .ff33 {
+    font-size: 2.3em !important;
+  }
+  .ff34 {
+    font-size: 2.4em !important;
+  }
+  .ff35 {
+    font-size: 2.5em !important;
+  }
+  .ff40 {
+    font-size: 3em !important;
+  }
+  .ff45 {
+    font-size: 3.5em !important;
+  }
+}
+
+
+/*------------------------------------------------------------
+line-height・・・段落
+-------------------------------------------------------------*/
+
+.lh11 {
+  line-height: 110% !important;
+}
+.lh12 {
+  line-height: 120% !important;
+}
+.lh13 {
+  line-height: 130% !important;
+}
+.lh14 {
+  line-height: 140% !important;
+}
+.lh15 {
+  line-height: 150% !important;
+}
+.lh16 {
+  line-height: 160% !important;
+}
+.lh17 {
+  line-height: 170% !important;
+}
+.lh18 {
+  line-height: 180% !important;
+}
+.lh19 {
+  line-height: 190% !important;
+}
+.lh20 {
+  line-height: 200% !important;
+}
+
+/*------------------------------------------------------------
+Awesome・・・カスタムフォント設定
+-------------------------------------------------------------*/
+
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-feature-settings: normal;
+  font-language-override: normal;
+  font-kerning: auto;
+  font-synthesis: weight style;
+  font-variant: normal;
+  font-size: inherit;
+  text-rendering: auto;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*------------------------------------------------------------
+Align/position・・・揃え・ポジション・ブロック
+-------------------------------------------------------------*/
+
+.relative {
+  position: relative;
+}
+.center {
+  text-align: center;
+}
+.m-center {
+  margin: 0 auto;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.b,.b a {
+  font-weight: 900!important;
+}
+.normal {
+  font-weight: normal !important;
+}
+.clearfix {
+  min-height: 1px;
+}
+.clr::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*------------------------------------------------------------
+エディタ用スニペット
+-------------------------------------------------------------*/
+
+.boldstyle {
+  font-weight: 600;
+}
+.fontwhite {
+  color: #ffffff;
+}
+.fontred {
+  color: #dd0000;
+}
+.fontblack {
+  color: #000000 !important;
+}
+.fontbule {
+  color: #0077ee;
+}
+.borderBox {
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.border2Box {
+  border: 4px double #e5e5e5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.bgBox {
+  background: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.paperBox {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+}
+.boldBox {
+  border: 3px solid #191919;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.bracketsBox {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.bracketsBox:after,
+.bracketsBox:before {
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  content: "";
+}
+.bracketsBox:before {
+  top: 0;
+  left: 0;
+  border-top: solid 1px #191919;
+  border-left: solid 1px #191919;
+}
+.bracketsBox:after {
+  right: 0;
+  bottom: 0;
+  border-right: solid 1px #191919;
+  border-bottom: solid 1px #191919;
+}
+
+.questionBox {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 20px 20px 20px 70px;
+}
+.questionBox {
+  background-color: #d9eff7;
+}
+.exclamationBox,
+.questionBox {
+  padding: 15px 15px 15px 55px;
+}
+.exclamationBox:before,
+.questionBox:before {
+  top: 15px;
+  left: 15px;
+  font-size: 1.6rem;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+}
+
+.pointBox {
+  position: relative;
+  border: 2px solid #c53929;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.pointBox:before {
+  content: "POINT";
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #fff;
+  color: #c53929;
+  padding: 0 10px;
+}
+
+.markerYellow {
+  background: linear-gradient(transparent 60%, #fff600 60%);
+}
+.markerPink {
+  background: linear-gradient(transparent 60%, #ffdfef 60%);
+}
+.markerBlue {
+  background: linear-gradient(transparent 60%, #cce5ff 60%);
+}
+
+/*------------------------------------------------------------
+レスポンシブ切替
+-------------------------------------------------------------*/
+
+.visible-sp,.visible-tb {
+  display: none;
+}
+
+/* 1024px〜768px：小型PC
+------------------------------ */
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .hidden-tb {
+    display: none;
+  }
+
+  .visible-tb {
+    display: inline;
+  }
+}
+
+/* 767px〜480px：スマホ・タブレット
+------------------------------ */
+
+@media screen and (max-width: 767px) {
+  .size-thumbnail,
+  size-large {
+    width: 100%;
+    height: auto;
+  }
+
+  .w100sp {
+    width: 100%;
+    height: auto;
+  }
+
+  .hidden-sp {
+    display: none;
+  }
+
+  .visible-sp {
+    display: inline;
+  }
+}
+
+.w100-all {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 479px) {
+  .w100 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/*------------------------------------------------------------
+margin・・・外周りの余白の設定
+-------------------------------------------------------------*/
+
+.m0 {
+  margin: 0 !important;
+} /*周りからのmarginを0にする*/
+.m0-t {
+  margin-top: 0 !important;
+} /*上からのmarginが0pxx*/
+.m0-r {
+  margin-right: 0 !important;
+} /*右からのmarginが0px*/
+.m0-b {
+  margin-bottom: 0 !important;
+} /*下からのmarginが0px*/
+.m0-l {
+  margin-left: 0 !important;
+} /*左からのmarginが0px*/
+
+.m1 {
+  margin: 1px !important;
+} /*周りからのmarginを1にする*/
+.m1-t {
+  margin-top: 1px !important;
+} /*上からのmarginが1pxx*/
+.m1-r {
+  margin-right: 1px !important;
+} /*右からのmarginが1px*/
+.m1-b {
+  margin-bottom: 1px !important;
+} /*下からのmarginが1px*/
+.m1-l {
+  margin-left: 1px !important;
+} /*左からのmarginが1px*/
+
+.m2 {
+  margin: 2px !important;
+} /*周りからのmarginを2にする*/
+.m2-t {
+  margin-top: 2px !important;
+} /*上からのmarginが2pxx*/
+.m2-r {
+  margin-right: 2px !important;
+} /*右からのmarginが2px*/
+.m2-b {
+  margin-bottom: 2px !important;
+} /*下からのmarginが2px*/
+.m2-l {
+  margin-left: 2px !important;
+} /*左からのmarginが2px*/
+
+.m3 {
+  margin: 3px !important;
+} /*周りからのmarginを3にする*/
+.m3-t {
+  margin-top: 3px !important;
+} /*上からのmarginが3pxx*/
+.m3-r {
+  margin-right: 3px !important;
+} /*右からのmarginが3px*/
+.m3-b {
+  margin-bottom: 3px !important;
+} /*下からのmarginが3px*/
+.m3-l {
+  margin-left: 3px !important;
+} /*左からのmarginが3px*/
+
+.m4 {
+  margin: 4px !important;
+} /*周りからのmarginを4にする*/
+.m4-t {
+  margin-top: 4px !important;
+} /*上からのmarginが4pxx*/
+.m4-r {
+  margin-right: 4px !important;
+} /*右からのmarginが4px*/
+.m4-b {
+  margin-bottom: 4px !important;
+} /*下からのmarginが4px*/
+.m4-l {
+  margin-left: 4px !important;
+} /*左からのmarginが4px*/
+
+.m5 {
+  margin: 5px !important;
+} /*周りからのmarginが5px*/
+.m5-t {
+  margin-top: 5px !important;
+} /*上からのmarginが5px*/
+.m5-r {
+  margin-right: 5px !important;
+} /*右からのmarginが5px*/
+.m5-b {
+  margin-bottom: 5px !important;
+} /*下からのmarginが5px*/
+.m5-l {
+  margin-left: 5px !important;
+} /*左からのmarginが5px*/
+
+.m10 {
+  margin: 10px !important;
+} /*周りからのmarginが10px*/
+.m10-t {
+  margin-top: 10px !important;
+} /*上からのmarginが10px*/
+.m10-r {
+  margin-right: 10px !important;
+} /*右からのmarginが10px*/
+.m10-b {
+  margin-bottom: 10px !important;
+} /*下からのmarginが10px*/
+.m10-l {
+  margin-left: 10px !important;
+} /*左からのmarginが10px*/
+
+.m15 {
+  margin: 15px !important;
+}
+.m15-t {
+  margin-top: 15px !important;
+}
+.m15-r {
+  margin-right: 15px !important;
+}
+.m15-b {
+  margin-bottom: 15px !important;
+}
+.m15-l {
+  margin-left: 15px !important;
+}
+
+.m20 {
+  margin: 20px !important;
+}
+.m20-t {
+  margin-top: 20px !important;
+}
+.m20-r {
+  margin-right: 20px !important;
+}
+.m20-b {
+  margin-bottom: 20px !important;
+}
+.m20-l {
+  margin-left: 20px !important;
+}
+
+.m25 {
+  margin: 25px !important;
+}
+.m25-t {
+  margin-top: 25px !important;
+}
+.m25-r {
+  margin-right: 25px !important;
+}
+.m25-b {
+  margin-bottom: 25px !important;
+}
+.m25-l {
+  margin-left: 25px !important;
+}
+
+.m30 {
+  margin: 30px !important;
+}
+.m30-t {
+  margin-top: 30px !important;
+}
+.m30-r {
+  margin-right: 30px !important;
+}
+.m30-b {
+  margin-bottom: 30px !important;
+}
+.m30-l {
+  margin-left: 30px !important;
+}
+
+.m35 {
+  margin: 35px !important;
+}
+.m35-t {
+  margin-top: 35px !important;
+}
+.m35-r {
+  margin-right: 35px !important;
+}
+.m35-b {
+  margin-bottom: 35px !important;
+}
+.m35-l {
+  margin-left: 35px !important;
+}
+
+.m40 {
+  margin: 40px !important;
+}
+.m40-t {
+  margin-top: 40px !important;
+}
+.m40-r {
+  margin-right: 40px !important;
+}
+.m40-b {
+  margin-bottom: 40px !important;
+}
+.m40-l {
+  margin-left: 40px !important;
+}
+
+.m45 {
+  margin: 45px !important;
+}
+.m45-t {
+  margin-top: 45px !important;
+}
+.m45-r {
+  margin-right: 45px !important;
+}
+.m45-b {
+  margin-bottom: 45px !important;
+}
+.m45-l {
+  margin-left: 45px !important;
+}
+
+.m50 {
+  margin: 50px !important;
+}
+.m50-t {
+  margin-top: 50px !important;
+}
+.m50-r {
+  margin-right: 50px !important;
+}
+.m50-b {
+  margin-bottom: 50px !important;
+}
+.m50-l {
+  margin-left: 50px !important;
+}
+
+.m55 {
+  margin: 55px !important;
+}
+.m55-t {
+  margin-top: 55px !important;
+}
+.m55-r {
+  margin-right: 55px !important;
+}
+.m55-b {
+  margin-bottom: 55px !important;
+}
+.m55-l {
+  margin-left: 55px !important;
+}
+
+.m60 {
+  margin: 60px !important;
+}
+.m60-t {
+  margin-top: 60px !important;
+}
+.m60-r {
+  margin-right: 60px !important;
+}
+.m60-b {
+  margin-bottom: 60px !important;
+}
+.m60-l {
+  margin-left: 60px !important;
+}
+
+.m65 {
+  margin: 65px !important;
+}
+.m65-t {
+  margin-top: 65px !important;
+}
+.m65-r {
+  margin-right: 65px !important;
+}
+.m65-b {
+  margin-bottom: 65px !important;
+}
+.m65-l {
+  margin-left: 65px !important;
+}
+
+.m70 {
+  margin: 70px !important;
+}
+.m70-t {
+  margin-top: 70px !important;
+}
+.m70-r {
+  margin-right: 70px !important;
+}
+.m70-b {
+  margin-bottom: 70px !important;
+}
+.m70-l {
+  margin-left: 70px !important;
+}
+
+.m75 {
+  margin: 75px !important;
+}
+.m75-t {
+  margin-top: 75px !important;
+}
+.m75-r {
+  margin-right: 75px !important;
+}
+.m75-b {
+  margin-bottom: 75px !important;
+}
+.m75-l {
+  margin-left: 75px !important;
+}
+
+.m80 {
+  margin: 80px !important;
+}
+.m80-t {
+  margin-top: 80px !important;
+}
+.m80-r {
+  margin-right: 80px !important;
+}
+.m80-b {
+  margin-bottom: 80px !important;
+}
+.m80-l {
+  margin-left: 80px !important;
+}
+
+.m85 {
+  margin: 85px !important;
+}
+.m85-t {
+  margin-top: 85px !important;
+}
+.m85-r {
+  margin-right: 85px !important;
+}
+.m85-b {
+  margin-bottom: 85px !important;
+}
+.m85-l {
+  margin-left: 85px !important;
+}
+
+.m90 {
+  margin: 90px !important;
+}
+.m90-t {
+  margin-top: 90px !important;
+}
+.m90-r {
+  margin-right: 90px !important;
+}
+.m90-b {
+  margin-bottom: 90px !important;
+}
+.m90-l {
+  margin-left: 90px !important;
+}
+
+.m95 {
+  margin: 95px !important;
+}
+.m95-t {
+  margin-top: 95px !important;
+}
+.m95-r {
+  margin-right: 95px !important;
+}
+.m95-b {
+  margin-bottom: 95px !important;
+}
+.m95-l {
+  margin-left: 95px !important;
+}
+
+/*------------------------------------------------------------
+padding・・・内回りの余白の設定
+-------------------------------------------------------------*/
+
+.p0 {
+  padding: 0 !important;
+} /*周りからのmarginを0にする*/
+.p0-t {
+  padding-top: 0 !important;
+} /*上からのmarginが0px*/
+.p0-r {
+  padding-right: 0 !important;
+} /*右からのmarginが0px*/
+.p0-b {
+  padding-bottom: 0 !important;
+} /*下からのmarginが0px*/
+.p0-l {
+  padding-left: 0 !important;
+} /*左からのmarginが0px*/
+
+.p1 {
+  padding: 1px !important;
+} /*周りからのmarginが1px*/
+.p1-t {
+  padding-top: 1px !important;
+} /*上からのmarginが1px*/
+.p1-r {
+  padding-right: 1px !important;
+} /*右からのmarginが1px*/
+.p1-b {
+  padding-bottom: 1px !important;
+} /*下からのmarginが1px*/
+.p1-l {
+  padding-left: 1px !important;
+} /*左からのmarginが1px*/
+
+.p2 {
+  padding: 2px !important;
+} /*周りからのmarginが2px*/
+.p2-t {
+  padding-top: 2px !important;
+} /*上からのmarginが2px*/
+.p2-r {
+  padding-right: 2px !important;
+} /*右からのmarginが2px*/
+.p2-b {
+  padding-bottom: 2px !important;
+} /*下からのmarginが2px*/
+.p2-l {
+  padding-left: 2px !important;
+} /*左からのmarginが2px*/
+
+.p3 {
+  padding: 3px !important;
+} /*周りからのmarginが3px*/
+.p3-t {
+  padding-top: 3px !important;
+} /*上からのmarginが3px*/
+.p3-r {
+  padding-right: 3px !important;
+} /*右からのmarginが3px*/
+.p3-b {
+  padding-bottom: 3px !important;
+} /*下からのmarginが3px*/
+.p3-l {
+  padding-left: 3px !important;
+} /*左からのmarginが3px*/
+
+.p4 {
+  padding: 4px !important;
+} /*周りからのmarginが4px*/
+.p4-t {
+  padding-top: 4px !important;
+} /*上からのmarginが4px*/
+.p4-r {
+  padding-right: 4px !important;
+} /*右からのmarginが4px*/
+.p4-b {
+  padding-bottom: 4px !important;
+} /*下からのmarginが4px*/
+.p4-l {
+  padding-left: 4px !important;
+} /*左からのmarginが4px*/
+
+.p5 {
+  padding: 5px !important;
+} /*周りからのmarginが5px*/
+.p5-t {
+  padding-top: 5px !important;
+} /*上からのmarginが5px*/
+.p5-r {
+  padding-right: 5px !important;
+} /*右からのmarginが5px*/
+.p5-b {
+  padding-bottom: 5px !important;
+} /*下からのmarginが5px*/
+.p5-l {
+  padding-left: 5px !important;
+} /*左からのmarginが5px*/
+
+.p10 {
+  padding: 10px !important;
+} /*周りからのmarginが10px*/
+.p10-t {
+  padding-top: 10px !important;
+} /*上からのmarginが10px*/
+.p10-r {
+  padding-right: 10px !important;
+} /*右からのmarginが10px*/
+.p10-b {
+  padding-bottom: 10px !important;
+} /*下からのmarginが10px*/
+.p10-l {
+  padding-left: 10px !important;
+} /*左からのmarginが10px*/
+
+.p15 {
+  padding: 15px !important;
+}
+.p15-t {
+  padding-top: 15px !important;
+}
+.p15-r {
+  padding-right: 15px !important;
+}
+.p15-b {
+  padding-bottom: 15px !important;
+}
+.p15-l {
+  padding-left: 15px !important;
+}
+
+.p20 {
+  padding: 20px !important;
+}
+.p20-t {
+  padding-top: 20px !important;
+}
+.p20-r {
+  padding-right: 20px !important;
+}
+.p20-b {
+  padding-bottom: 20px !important;
+}
+.p20-l {
+  padding-left: 20px !important;
+}
+
+.p25 {
+  padding: 25px !important;
+}
+.p25-t {
+  padding-top: 25px !important;
+}
+.p25-r {
+  padding-right: 25px !important;
+}
+.p25-b {
+  padding-bottom: 25px !important;
+}
+.p25-l {
+  padding-left: 25px !important;
+}
+
+.p25 {
+  padding: 25px !important;
+}
+.p25-t {
+  padding-top: 25px !important;
+}
+.p25-r {
+  padding-right: 25px !important;
+}
+.p25-b {
+  padding-bottom: 25px !important;
+}
+.p25-l {
+  padding-left: 25px !important;
+}
+
+.p30 {
+  padding: 30px !important;
+}
+.p30-t {
+  padding-top: 30px !important;
+}
+.p30-r {
+  padding-right: 30px !important;
+}
+.p30-b {
+  padding-bottom: 30px !important;
+}
+.p30-l {
+  padding-left: 30px !important;
+}
+
+.p35 {
+  padding: 35px !important;
+}
+.p35-t {
+  padding-top: 35px !important;
+}
+.p35-r {
+  padding-right: 35px !important;
+}
+.p35-b {
+  padding-bottom: 35px !important;
+}
+.p35-l {
+  padding-left: 35px !important;
+}
+
+.p40 {
+  padding: 40px !important;
+}
+.p40-t {
+  padding-top: 40px !important;
+}
+.p40-r {
+  padding-right: 40px !important;
+}
+.p40-b {
+  padding-bottom: 40px !important;
+}
+.p40-l {
+  padding-left: 40px !important;
+}
+
+.p45 {
+  padding: 45px !important;
+}
+.p45-t {
+  padding-top: 45px !important;
+}
+.p45-r {
+  padding-right: 45px !important;
+}
+.p45-b {
+  padding-bottom: 45px !important;
+}
+.p45-l {
+  padding-left: 45px !important;
+}
+
+.p50 {
+  padding: 50px !important;
+}
+.p50-t {
+  padding-top: 50px !important;
+}
+.p50-r {
+  padding-right: 50px !important;
+}
+.p50-b {
+  padding-bottom: 50px !important;
+}
+.p50-l {
+  padding-left: 50px !important;
+}
+
+.p55 {
+  padding: 55px !important;
+}
+.p55-t {
+  padding-top: 55px !important;
+}
+.p55-r {
+  padding-right: 55px !important;
+}
+.p55-b {
+  padding-bottom: 55px !important;
+}
+.p55-l {
+  padding-left: 55px !important;
+}
+
+.p60 {
+  padding: 60px !important;
+}
+.p60-t {
+  padding-top: 60px !important;
+}
+.p60-r {
+  padding-right: 60px !important;
+}
+.p60-b {
+  padding-bottom: 60px !important;
+}
+.p60-l {
+  padding-left: 60px !important;
+}
+
+.p65 {
+  padding: 65px !important;
+}
+.p65-t {
+  padding-top: 65px !important;
+}
+.p65-r {
+  padding-right: 65px !important;
+}
+.p65-b {
+  padding-bottom: 65px !important;
+}
+.p65-l {
+  padding-left: 65px !important;
+}
+
+.p70 {
+  padding: 70px !important;
+}
+.p70-t {
+  padding-top: 70px !important;
+}
+.p70-r {
+  padding-right: 70px !important;
+}
+.p70-b {
+  padding-bottom: 70px !important;
+}
+.p70-l {
+  padding-left: 70px !important;
+}
+
+.p75 {
+  padding: 75px !important;
+}
+.p75-t {
+  padding-top: 75px !important;
+}
+.p75-r {
+  padding-right: 75px !important;
+}
+.p75-b {
+  padding-bottom: 75px !important;
+}
+.p75-l {
+  padding-left: 75px !important;
+}
+
+.p80 {
+  padding: 80px !important;
+}
+.p80-t {
+  padding-top: 80px !important;
+}
+.p80-r {
+  padding-right: 80px !important;
+}
+.p80-b {
+  padding-bottom: 80px !important;
+}
+.p80-l {
+  padding-left: 80px !important;
+}
+
+.p85 {
+  padding: 85px !important;
+}
+.p85-t {
+  padding-top: 85px !important;
+}
+.p85-r {
+  padding-right: 85px !important;
+}
+.p85-b {
+  padding-bottom: 85px !important;
+}
+.p85-l {
+  padding-left: 85px !important;
+}
+
+.p90 {
+  padding: 90px !important;
+}
+.p90-t {
+  padding-top: 90px !important;
+}
+.p90-r {
+  padding-right: 90px !important;
+}
+.p90-b {
+  padding-bottom: 90px !important;
+}
+.p90-l {
+  padding-left: 90px !important;
+}
+
+.p95 {
+  padding: 95px !important;
+}
+.p95-t {
+  padding-top: 95px !important;
+}
+.p95-r {
+  padding-right: 95px !important;
+}
+.p95-b {
+  padding-bottom: 95px !important;
+}
+.p95-l {
+  padding-left: 95px !important;
+}
+
+@media (min-width: 767px) {
+  /*------------------------------------------------------------
+    margin・・・外周りの余白の設定（PC・タブレット）
+    -------------------------------------------------------------*/
+
+  .sm-m0 {
+    margin: 0 !important;
+  } /*周りからのmarginを0にする*/
+  .sm-m0-t {
+    margin-top: 0 !important;
+  } /*上からのmarginが0pxx*/
+  .sm-m0-r {
+    margin-right: 0 !important;
+  } /*右からのmarginが0px*/
+  .sm-m0-b {
+    margin-bottom: 0 !important;
+  } /*下からのmarginが0px*/
+  .sm-m0-l {
+    margin-left: 0 !important;
+  } /*左からのmarginが0px*/
+
+  .sm-m1 {
+    margin: 1px !important;
+  } /*周りからのmarginを1にする*/
+  .sm-m1-t {
+    margin-top: 1px !important;
+  } /*上からのmarginが1pxx*/
+  .sm-m1-r {
+    margin-right: 1px !important;
+  } /*右からのmarginが1px*/
+  .sm-m1-b {
+    margin-bottom: 1px !important;
+  } /*下からのmarginが1px*/
+  .sm-m1-l {
+    margin-left: 1px !important;
+  } /*左からのmarginが1px*/
+
+  .sm-m2 {
+    margin: 2px !important;
+  } /*周りからのmarginを2にする*/
+  .sm-m2-t {
+    margin-top: 2px !important;
+  } /*上からのmarginが2pxx*/
+  .sm-m2-r {
+    margin-right: 2px !important;
+  } /*右からのmarginが2px*/
+  .sm-m2-b {
+    margin-bottom: 2px !important;
+  } /*下からのmarginが2px*/
+  .sm-m2-l {
+    margin-left: 2px !important;
+  } /*左からのmarginが2px*/
+
+  .sm-m3 {
+    margin: 3px !important;
+  } /*周りからのmarginを3にする*/
+  .sm-m3-t {
+    margin-top: 3px !important;
+  } /*上からのmarginが3pxx*/
+  .sm-m3-r {
+    margin-right: 3px !important;
+  } /*右からのmarginが3px*/
+  .sm-m3-b {
+    margin-bottom: 3px !important;
+  } /*下からのmarginが3px*/
+  .sm-m3-l {
+    margin-left: 3px !important;
+  } /*左からのmarginが3px*/
+
+  .sm-m4 {
+    margin: 4px !important;
+  } /*周りからのmarginを4にする*/
+  .sm-m4-t {
+    margin-top: 4px !important;
+  } /*上からのmarginが4pxx*/
+  .sm-m4-r {
+    margin-right: 4px !important;
+  } /*右からのmarginが4px*/
+  .sm-m4-b {
+    margin-bottom: 4px !important;
+  } /*下からのmarginが4px*/
+  .sm-m4-l {
+    margin-left: 4px !important;
+  } /*左からのmarginが4px*/
+
+  .sm-m5 {
+    margin: 5px !important;
+  } /*周りからのmarginが5px*/
+  .sm-m5-t {
+    margin-top: 5px !important;
+  } /*上からのmarginが5px*/
+  .sm-m5-r {
+    margin-right: 5px !important;
+  } /*右からのmarginが5px*/
+  .sm-m5-b {
+    margin-bottom: 5px !important;
+  } /*下からのmarginが5px*/
+  .sm-m5-l {
+    margin-left: 5px !important;
+  } /*左からのmarginが5px*/
+
+  .sm-m6 {
+    margin: 6px !important;
+  } /*周りからのmarginが5px*/
+  .sm-m6-t {
+    margin-top: 6px !important;
+  } /*上からのmarginが5px*/
+  .sm-m6-r {
+    margin-right: 6px !important;
+  } /*右からのmarginが5px*/
+  .sm-m6-b {
+    margin-bottom: 6px !important;
+  } /*下からのmarginが5px*/
+  .sm-m6-l {
+    margin-left: 6px !important;
+  } /*左からのmarginが5px*/
+
+  .sm-m7 {
+    margin: 7px !important;
+  } /*周りからのmarginが5px*/
+  .sm-m7-t {
+    margin-top: 7px !important;
+  } /*上からのmarginが5px*/
+  .sm-m7-r {
+    margin-right: 7px !important;
+  } /*右からのmarginが5px*/
+  .sm-m7-b {
+    margin-bottom: 7px !important;
+  } /*下からのmarginが5px*/
+  .sm-m7-l {
+    margin-left: 7px !important;
+  } /*左からのmarginが5px*/
+
+  .sm-m8 {
+    margin: 8px !important;
+  } /*周りからのmarginが5px*/
+  .sm-m8-t {
+    margin-top: 8px !important;
+  } /*上からのmarginが5px*/
+  .sm-m8-r {
+    margin-right: 8px !important;
+  } /*右からのmarginが5px*/
+  .sm-m8-b {
+    margin-bottom: 8px !important;
+  } /*下からのmarginが5px*/
+  .sm-m8-l {
+    margin-left: 8px !important;
+  } /*左からのmarginが5px*/
+
+  .sm-m9 {
+    margin: 9px !important;
+  } /*周りからのmarginが5px*/
+  .sm-m9-t {
+    margin-top: 9px !important;
+  } /*上からのmarginが5px*/
+  .sm-m9-r {
+    margin-right: 9px !important;
+  } /*右からのmarginが5px*/
+  .sm-m9-b {
+    margin-bottom: 9px !important;
+  } /*下からのmarginが5px*/
+  .sm-m9-l {
+    margin-left: 9px !important;
+  } /*左からのmarginが5px*/
+
+  .sm-m10 {
+    margin: 10px !important;
+  } /*周りからのmarginが10px*/
+  .sm-m10-t {
+    margin-top: 10px !important;
+  } /*上からのmarginが10px*/
+  .sm-m10-r {
+    margin-right: 10px !important;
+  } /*右からのmarginが10px*/
+  .sm-m10-b {
+    margin-bottom: 10px !important;
+  } /*下からのmarginが10px*/
+  .sm-m10-l {
+    margin-left: 10px !important;
+  } /*左からのmarginが10px*/
+
+  .sm-m15 {
+    margin: 15px !important;
+  }
+  .sm-m15-t {
+    margin-top: 15px !important;
+  }
+  .sm-m15-r {
+    margin-right: 15px !important;
+  }
+  .sm-m15-b {
+    margin-bottom: 15px !important;
+  }
+  .sm-m15-l {
+    margin-left: 15px !important;
+  }
+
+  .sm-m20 {
+    margin: 20px !important;
+  }
+  .sm-m20-t {
+    margin-top: 20px !important;
+  }
+  .sm-m20-r {
+    margin-right: 20px !important;
+  }
+  .sm-m20-b {
+    margin-bottom: 20px !important;
+  }
+  .sm-m20-l {
+    margin-left: 20px !important;
+  }
+
+  .sm-m25 {
+    margin: 25px !important;
+  }
+  .sm-m25-t {
+    margin-top: 25px !important;
+  }
+  .sm-m25-r {
+    margin-right: 25px !important;
+  }
+  .sm-m25-b {
+    margin-bottom: 25px !important;
+  }
+  .sm-m25-l {
+    margin-left: 25px !important;
+  }
+
+  .sm-m30 {
+    margin: 30px !important;
+  }
+  .sm-m30-t {
+    margin-top: 30px !important;
+  }
+  .sm-m30-r {
+    margin-right: 30px !important;
+  }
+  .sm-m30-b {
+    margin-bottom: 30px !important;
+  }
+  .sm-m30-l {
+    margin-left: 30px !important;
+  }
+
+  .sm-m35 {
+    margin: 35px !important;
+  }
+  .sm-m35-t {
+    margin-top: 35px !important;
+  }
+  .sm-m35-r {
+    margin-right: 35px !important;
+  }
+  .sm-m35-b {
+    margin-bottom: 35px !important;
+  }
+  .sm-m35-l {
+    margin-left: 35px !important;
+  }
+
+  .sm-m40 {
+    margin: 40px !important;
+  }
+  .sm-m40-t {
+    margin-top: 40px !important;
+  }
+  .sm-m40-r {
+    margin-right: 40px !important;
+  }
+  .sm-m40-b {
+    margin-bottom: 40px !important;
+  }
+  .sm-m40-l {
+    margin-left: 40px !important;
+  }
+
+  .sm-m45 {
+    margin: 45px !important;
+  }
+  .sm-m45-t {
+    margin-top: 45px !important;
+  }
+  .sm-m45-r {
+    margin-right: 45px !important;
+  }
+  .sm-m45-b {
+    margin-bottom: 45px !important;
+  }
+  .sm-m45-l {
+    margin-left: 45px !important;
+  }
+
+  .sm-m50 {
+    margin: 50px !important;
+  }
+  .sm-m50-t {
+    margin-top: 50px !important;
+  }
+  .sm-m50-r {
+    margin-right: 50px !important;
+  }
+  .sm-m50-b {
+    margin-bottom: 50px !important;
+  }
+  .sm-m50-l {
+    margin-left: 50px !important;
+  }
+
+  .sm-m55 {
+    margin: 55px !important;
+  }
+  .sm-m55-t {
+    margin-top: 55px !important;
+  }
+  .sm-m55-r {
+    margin-right: 55px !important;
+  }
+  .sm-m55-b {
+    margin-bottom: 55px !important;
+  }
+  .sm-m55-l {
+    margin-left: 55px !important;
+  }
+
+  .sm-m60 {
+    margin: 60px !important;
+  }
+  .sm-m60-t {
+    margin-top: 60px !important;
+  }
+  .sm-m60-r {
+    margin-right: 60px !important;
+  }
+  .sm-m60-b {
+    margin-bottom: 60px !important;
+  }
+  .sm-m60-l {
+    margin-left: 60px !important;
+  }
+
+  .sm-m65 {
+    margin: 65px !important;
+  }
+  .sm-m65-t {
+    margin-top: 65px !important;
+  }
+  .sm-m65-r {
+    margin-right: 65px !important;
+  }
+  .sm-m65-b {
+    margin-bottom: 65px !important;
+  }
+  .sm-m65-l {
+    margin-left: 65px !important;
+  }
+
+  .sm-m70 {
+    margin: 70px !important;
+  }
+  .sm-m70-t {
+    margin-top: 70px !important;
+  }
+  .sm-m70-r {
+    margin-right: 70px !important;
+  }
+  .sm-m70-b {
+    margin-bottom: 70px !important;
+  }
+  .sm-m70-l {
+    margin-left: 70px !important;
+  }
+
+  .sm-m75 {
+    margin: 75px !important;
+  }
+  .sm-m75-t {
+    margin-top: 75px !important;
+  }
+  .sm-m75-r {
+    margin-right: 75px !important;
+  }
+  .sm-m75-b {
+    margin-bottom: 75px !important;
+  }
+  .sm-m75-l {
+    margin-left: 75px !important;
+  }
+
+  .sm-m80 {
+    margin: 80px !important;
+  }
+  .sm-m80-t {
+    margin-top: 80px !important;
+  }
+  .sm-m80-r {
+    margin-right: 80px !important;
+  }
+  .sm-m80-b {
+    margin-bottom: 80px !important;
+  }
+  .sm-m80-l {
+    margin-left: 80px !important;
+  }
+
+  .sm-m85 {
+    margin: 85px !important;
+  }
+  .sm-m85-t {
+    margin-top: 85px !important;
+  }
+  .sm-m85-r {
+    margin-right: 85px !important;
+  }
+  .sm-m85-b {
+    margin-bottom: 85px !important;
+  }
+  .sm-m85-l {
+    margin-left: 85px !important;
+  }
+
+  .sm-m90 {
+    margin: 90px !important;
+  }
+  .sm-m90-t {
+    margin-top: 90px !important;
+  }
+  .sm-m90-r {
+    margin-right: 90px !important;
+  }
+  .sm-m90-b {
+    margin-bottom: 90px !important;
+  }
+  .sm-m90-l {
+    margin-left: 90px !important;
+  }
+
+  .sm-m95 {
+    margin: 95px !important;
+  }
+  .sm-m95-t {
+    margin-top: 95px !important;
+  }
+  .sm-m95-r {
+    margin-right: 95px !important;
+  }
+  .sm-m95-b {
+    margin-bottom: 95px !important;
+  }
+  .sm-m95-l {
+    margin-left: 95px !important;
+  }
+
+  /*------------------------------------------------------------
+    padding・・・内回りの余白の設定（PC・タブレット）
+    -------------------------------------------------------------*/
+
+  .sm-p0 {
+    padding: 0 !important;
+  } /*周りからのmarginを0にする*/
+  .sm-p0-t {
+    padding-top: 0 !important;
+  } /*上からのmarginが0px*/
+  .sm-p0-r {
+    padding-right: 0 !important;
+  } /*右からのmarginが0px*/
+  .sm-p0-b {
+    padding-bottom: 0 !important;
+  } /*下からのmarginが0px*/
+  .sm-p0-l {
+    padding-left: 0 !important;
+  } /*左からのmarginが0px*/
+
+  .sm-p1 {
+    padding: 1px !important;
+  } /*周りからのmarginが1px*/
+  .sm-p1-t {
+    padding-top: 1px !important;
+  } /*上からのmarginが1px*/
+  .sm-p1-r {
+    padding-right: 1px !important;
+  } /*右からのmarginが1px*/
+  .sm-p1-b {
+    padding-bottom: 1px !important;
+  } /*下からのmarginが1px*/
+  .sm-p1-l {
+    padding-left: 1px !important;
+  } /*左からのmarginが1px*/
+
+  .sm-p2 {
+    padding: 2px !important;
+  } /*周りからのmarginが2px*/
+  .sm-p2-t {
+    padding-top: 2px !important;
+  } /*上からのmarginが2px*/
+  .sm-p2-r {
+    padding-right: 2px !important;
+  } /*右からのmarginが2px*/
+  .sm-p2-b {
+    padding-bottom: 2px !important;
+  } /*下からのmarginが2px*/
+  .sm-p2-l {
+    padding-left: 2px !important;
+  } /*左からのmarginが2px*/
+
+  .sm-p3 {
+    padding: 3px !important;
+  } /*周りからのmarginが3px*/
+  .sm-p3-t {
+    padding-top: 3px !important;
+  } /*上からのmarginが3px*/
+  .sm-p3-r {
+    padding-right: 3px !important;
+  } /*右からのmarginが3px*/
+  .sm-p3-b {
+    padding-bottom: 3px !important;
+  } /*下からのmarginが3px*/
+  .sm-p3-l {
+    padding-left: 3px !important;
+  } /*左からのmarginが3px*/
+
+  .sm-p4 {
+    padding: 4px !important;
+  } /*周りからのmarginが4px*/
+  .sm-p4-t {
+    padding-top: 4px !important;
+  } /*上からのmarginが4px*/
+  .sm-p4-r {
+    padding-right: 4px !important;
+  } /*右からのmarginが4px*/
+  .sm-p4-b {
+    padding-bottom: 4px !important;
+  } /*下からのmarginが4px*/
+  .sm-p4-l {
+    padding-left: 4px !important;
+  } /*左からのmarginが4px*/
+
+  .sm-p5 {
+    padding: 5px !important;
+  } /*周りからのmarginが5px*/
+  .sm-p5-t {
+    padding-top: 5px !important;
+  } /*上からのmarginが5px*/
+  .sm-p5-r {
+    padding-right: 5px !important;
+  } /*右からのmarginが5px*/
+  .sm-p5-b {
+    padding-bottom: 5px !important;
+  } /*下からのmarginが5px*/
+  .sm-p5-l {
+    padding-left: 5px !important;
+  } /*左からのmarginが5px*/
+
+  .sm-p10 {
+    padding: 10px !important;
+  } /*周りからのmarginが10px*/
+  .sm-p10-t {
+    padding-top: 10px !important;
+  } /*上からのmarginが10px*/
+  .sm-p10-r {
+    padding-right: 10px !important;
+  } /*右からのmarginが10px*/
+  .sm-p10-b {
+    padding-bottom: 10px !important;
+  } /*下からのmarginが10px*/
+  .sm-p10-l {
+    padding-left: 10px !important;
+  } /*左からのmarginが10px*/
+
+  .sm-p15 {
+    padding: 15px !important;
+  }
+  .sm-p15-t {
+    padding-top: 15px !important;
+  }
+  .sm-p15-r {
+    padding-right: 15px !important;
+  }
+  .sm-p15-b {
+    padding-bottom: 15px !important;
+  }
+  .sm-p15-l {
+    padding-left: 15px !important;
+  }
+
+  .sm-p20 {
+    padding: 20px !important;
+  }
+  .sm-p20-t {
+    padding-top: 20px !important;
+  }
+  .sm-p20-r {
+    padding-right: 20px !important;
+  }
+  .sm-p20-b {
+    padding-bottom: 20px !important;
+  }
+  .sm-p20-l {
+    padding-left: 20px !important;
+  }
+
+  .sm-p25 {
+    padding: 25px !important;
+  }
+  .sm-p25-t {
+    padding-top: 25px !important;
+  }
+  .sm-p25-r {
+    padding-right: 25px !important;
+  }
+  .sm-p25-b {
+    padding-bottom: 25px !important;
+  }
+  .sm-p25-l {
+    padding-left: 25px !important;
+  }
+
+  .sm-p30 {
+    padding: 30px !important;
+  }
+  .sm-p30-t {
+    padding-top: 30px !important;
+  }
+  .sm-p30-r {
+    padding-right: 30px !important;
+  }
+  .sm-p30-b {
+    padding-bottom: 30px !important;
+  }
+  .sm-p30-l {
+    padding-left: 30px !important;
+  }
+
+  .sm-p35 {
+    padding: 35px !important;
+  }
+  .sm-p35-t {
+    padding-top: 35px !important;
+  }
+  .sm-p35-r {
+    padding-right: 35px !important;
+  }
+  .sm-p35-b {
+    padding-bottom: 35px !important;
+  }
+  .sm-p35-l {
+    padding-left: 35px !important;
+  }
+
+  .sm-p40 {
+    padding: 40px !important;
+  }
+  .sm-p40-t {
+    padding-top: 40px !important;
+  }
+  .sm-p40-r {
+    padding-right: 40px !important;
+  }
+  .sm-p40-b {
+    padding-bottom: 40px !important;
+  }
+  .sm-p40-l {
+    padding-left: 40px !important;
+  }
+
+  .sm-p45 {
+    padding: 45px !important;
+  }
+  .sm-p45-t {
+    padding-top: 45px !important;
+  }
+  .sm-p45-r {
+    padding-right: 45px !important;
+  }
+  .sm-p45-b {
+    padding-bottom: 45px !important;
+  }
+  .sm-p45-l {
+    padding-left: 45px !important;
+  }
+
+  .sm-p50 {
+    padding: 50px !important;
+  }
+  .sm-p50-t {
+    padding-top: 50px !important;
+  }
+  .sm-p50-r {
+    padding-right: 50px !important;
+  }
+  .sm-p50-b {
+    padding-bottom: 50px !important;
+  }
+  .sm-p50-l {
+    padding-left: 50px !important;
+  }
+
+  .sm-p55 {
+    padding: 55px !important;
+  }
+  .sm-p55-t {
+    padding-top: 55px !important;
+  }
+  .sm-p55-r {
+    padding-right: 55px !important;
+  }
+  .sm-p55-b {
+    padding-bottom: 55px !important;
+  }
+  .sm-p55-l {
+    padding-left: 55px !important;
+  }
+
+  .sm-p60 {
+    padding: 60px !important;
+  }
+  .sm-p60-t {
+    padding-top: 60px !important;
+  }
+  .sm-p60-r {
+    padding-right: 60px !important;
+  }
+  .sm-p60-b {
+    padding-bottom: 60px !important;
+  }
+  .sm-p60-l {
+    padding-left: 60px !important;
+  }
+
+  .sm-p65 {
+    padding: 65px !important;
+  }
+  .sm-p65-t {
+    padding-top: 65px !important;
+  }
+  .sm-p65-r {
+    padding-right: 65px !important;
+  }
+  .sm-p65-b {
+    padding-bottom: 65px !important;
+  }
+  .sm-p65-l {
+    padding-left: 65px !important;
+  }
+
+  .sm-p70 {
+    padding: 70px !important;
+  }
+  .sm-p70-t {
+    padding-top: 70px !important;
+  }
+  .sm-p70-r {
+    padding-right: 70px !important;
+  }
+  .sm-p70-b {
+    padding-bottom: 70px !important;
+  }
+  .sm-p70-l {
+    padding-left: 70px !important;
+  }
+
+  .sm-p75 {
+    padding: 75px !important;
+  }
+  .sm-p75-t {
+    padding-top: 75px !important;
+  }
+  .sm-p75-r {
+    padding-right: 75px !important;
+  }
+  .sm-p75-b {
+    padding-bottom: 75px !important;
+  }
+  .sm-p75-l {
+    padding-left: 75px !important;
+  }
+
+  .sm-p80 {
+    padding: 80px !important;
+  }
+  .sm-p80-t {
+    padding-top: 80px !important;
+  }
+  .sm-p80-r {
+    padding-right: 80px !important;
+  }
+  .sm-p80-b {
+    padding-bottom: 80px !important;
+  }
+  .sm-p80-l {
+    padding-left: 80px !important;
+  }
+
+  .sm-p85 {
+    padding: 85px !important;
+  }
+  .sm-p85-t {
+    padding-top: 85px !important;
+  }
+  .sm-p85-r {
+    padding-right: 85px !important;
+  }
+  .sm-p85-b {
+    padding-bottom: 85px !important;
+  }
+  .sm-p85-l {
+    padding-left: 85px !important;
+  }
+
+  .sm-p90 {
+    padding: 90px !important;
+  }
+  .sm-p90-t {
+    padding-top: 90px !important;
+  }
+  .sm-p90-r {
+    padding-right: 90px !important;
+  }
+  .sm-p90-b {
+    padding-bottom: 90px !important;
+  }
+  .sm-p90-l {
+    padding-left: 90px !important;
+  }
+
+  .sm-p95 {
+    padding: 95px !important;
+  }
+  .sm-p95-t {
+    padding-top: 95px !important;
+  }
+  .sm-p95-r {
+    padding-right: 95px !important;
+  }
+  .sm-p95-b {
+    padding-bottom: 95px !important;
+  }
+  .sm-p95-l {
+    padding-left: 95px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /*------------------------------------------------------------
+    margin・・・外周りの余白の設定（スマホ）
+    -------------------------------------------------------------*/
+
+  .xs-m0 {
+    margin: 0 !important;
+  } /*周りからのmarginを0にする*/
+  .xs-m0-t {
+    margin-top: 0 !important;
+  } /*上からのmarginが0pxx*/
+  .xs-m0-r {
+    margin-right: 0 !important;
+  } /*右からのmarginが0px*/
+  .xs-m0-b {
+    margin-bottom: 0 !important;
+  } /*下からのmarginが0px*/
+  .xs-m0-l {
+    margin-left: 0 !important;
+  } /*左からのmarginが0px*/
+
+  .xs-m1 {
+    margin: 1px !important;
+  } /*周りからのmarginを1にする*/
+  .xs-m1-t {
+    margin-top: 1px !important;
+  } /*上からのmarginが1pxx*/
+  .xs-m1-r {
+    margin-right: 1px !important;
+  } /*右からのmarginが1px*/
+  .xs-m1-b {
+    margin-bottom: 1px !important;
+  } /*下からのmarginが1px*/
+  .xs-m1-l {
+    margin-left: 1px !important;
+  } /*左からのmarginが1px*/
+
+  .xs-m2 {
+    margin: 2px !important;
+  } /*周りからのmarginを2にする*/
+  .xs-m2-t {
+    margin-top: 2px !important;
+  } /*上からのmarginが2pxx*/
+  .xs-m2-r {
+    margin-right: 2px !important;
+  } /*右からのmarginが2px*/
+  .xs-m2-b {
+    margin-bottom: 2px !important;
+  } /*下からのmarginが2px*/
+  .xs-m2-l {
+    margin-left: 2px !important;
+  } /*左からのmarginが2px*/
+
+  .xs-m3 {
+    margin: 3px !important;
+  } /*周りからのmarginを3にする*/
+  .xs-m3-t {
+    margin-top: 3px !important;
+  } /*上からのmarginが3pxx*/
+  .xs-m3-r {
+    margin-right: 3px !important;
+  } /*右からのmarginが3px*/
+  .xs-m3-b {
+    margin-bottom: 3px !important;
+  } /*下からのmarginが3px*/
+  .xs-m3-l {
+    margin-left: 3px !important;
+  } /*左からのmarginが3px*/
+
+  .xs-m4 {
+    margin: 4px !important;
+  } /*周りからのmarginを4にする*/
+  .xs-m4-t {
+    margin-top: 4px !important;
+  } /*上からのmarginが4pxx*/
+  .xs-m4-r {
+    margin-right: 4px !important;
+  } /*右からのmarginが4px*/
+  .xs-m4-b {
+    margin-bottom: 4px !important;
+  } /*下からのmarginが4px*/
+  .xs-m4-l {
+    margin-left: 4px !important;
+  } /*左からのmarginが4px*/
+
+  .xs-m5 {
+    margin: 5px !important;
+  } /*周りからのmarginが5px*/
+  .xs-m5-t {
+    margin-top: 5px !important;
+  } /*上からのmarginが5px*/
+  .xs-m5-r {
+    margin-right: 5px !important;
+  } /*右からのmarginが5px*/
+  .xs-m5-b {
+    margin-bottom: 5px !important;
+  } /*下からのmarginが5px*/
+  .xs-m5-l {
+    margin-left: 5px !important;
+  } /*左からのmarginが5px*/
+
+  .xs-m10 {
+    margin: 10px !important;
+  } /*周りからのmarginが10px*/
+  .xs-m10-t {
+    margin-top: 10px !important;
+  } /*上からのmarginが10px*/
+  .xs-m10-r {
+    margin-right: 10px !important;
+  } /*右からのmarginが10px*/
+  .xs-m10-b {
+    margin-bottom: 10px !important;
+  } /*下からのmarginが10px*/
+  .xs-m10-l {
+    margin-left: 10px !important;
+  } /*左からのmarginが10px*/
+
+  .xs-m15 {
+    margin: 15px !important;
+  }
+  .xs-m15-t {
+    margin-top: 15px !important;
+  }
+  .xs-m15-r {
+    margin-right: 15px !important;
+  }
+  .xs-m15-b {
+    margin-bottom: 15px !important;
+  }
+  .xs-m15-l {
+    margin-left: 15px !important;
+  }
+
+  .xs-m20 {
+    margin: 20px !important;
+  }
+  .xs-m20-t {
+    margin-top: 20px !important;
+  }
+  .xs-m20-r {
+    margin-right: 20px !important;
+  }
+  .xs-m20-b {
+    margin-bottom: 20px !important;
+  }
+  .xs-m20-l {
+    margin-left: 20px !important;
+  }
+
+  .xs-m25 {
+    margin: 25px !important;
+  }
+  .xs-m25-t {
+    margin-top: 25px !important;
+  }
+  .xs-m25-r {
+    margin-right: 25px !important;
+  }
+  .xs-m25-b {
+    margin-bottom: 25px !important;
+  }
+  .xs-m25-l {
+    margin-left: 25px !important;
+  }
+
+  .xs-m30 {
+    margin: 30px !important;
+  }
+  .xs-m30-t {
+    margin-top: 30px !important;
+  }
+  .xs-m30-r {
+    margin-right: 30px !important;
+  }
+  .xs-m30-b {
+    margin-bottom: 30px !important;
+  }
+  .xs-m30-l {
+    margin-left: 30px !important;
+  }
+
+  .xs-m35 {
+    margin: 35px !important;
+  }
+  .xs-m35-t {
+    margin-top: 35px !important;
+  }
+  .xs-m35-r {
+    margin-right: 35px !important;
+  }
+  .xs-m35-b {
+    margin-bottom: 35px !important;
+  }
+  .xs-m35-l {
+    margin-left: 35px !important;
+  }
+
+  .xs-m40 {
+    margin: 40px !important;
+  }
+  .xs-m40-t {
+    margin-top: 40px !important;
+  }
+  .xs-m40-r {
+    margin-right: 40px !important;
+  }
+  .xs-m40-b {
+    margin-bottom: 40px !important;
+  }
+  .xs-m40-l {
+    margin-left: 40px !important;
+  }
+
+  .xs-m45 {
+    margin: 45px !important;
+  }
+  .xs-m45-t {
+    margin-top: 45px !important;
+  }
+  .xs-m45-r {
+    margin-right: 45px !important;
+  }
+  .xs-m45-b {
+    margin-bottom: 45px !important;
+  }
+  .xs-m45-l {
+    margin-left: 45px !important;
+  }
+
+  .xs-m50 {
+    margin: 50px !important;
+  }
+  .xs-m50-t {
+    margin-top: 50px !important;
+  }
+  .xs-m50-r {
+    margin-right: 50px !important;
+  }
+  .xs-m50-b {
+    margin-bottom: 50px !important;
+  }
+  .xs-m50-l {
+    margin-left: 50px !important;
+  }
+
+  .xs-m55 {
+    margin: 55px !important;
+  }
+  .xs-m55-t {
+    margin-top: 55px !important;
+  }
+  .xs-m55-r {
+    margin-right: 55px !important;
+  }
+  .xs-m55-b {
+    margin-bottom: 55px !important;
+  }
+  .xs-m55-l {
+    margin-left: 55px !important;
+  }
+
+  .xs-m60 {
+    margin: 60px !important;
+  }
+  .xs-m60-t {
+    margin-top: 60px !important;
+  }
+  .xs-m60-r {
+    margin-right: 60px !important;
+  }
+  .xs-m60-b {
+    margin-bottom: 60px !important;
+  }
+  .xs-m60-l {
+    margin-left: 60px !important;
+  }
+
+  .xs-m65 {
+    margin: 65px !important;
+  }
+  .xs-m65-t {
+    margin-top: 65px !important;
+  }
+  .xs-m65-r {
+    margin-right: 65px !important;
+  }
+  .xs-m65-b {
+    margin-bottom: 65px !important;
+  }
+  .xs-m65-l {
+    margin-left: 65px !important;
+  }
+
+  .xs-m70 {
+    margin: 70px !important;
+  }
+  .xs-m70-t {
+    margin-top: 70px !important;
+  }
+  .xs-m70-r {
+    margin-right: 70px !important;
+  }
+  .xs-m70-b {
+    margin-bottom: 70px !important;
+  }
+  .xs-m70-l {
+    margin-left: 70px !important;
+  }
+
+  .xs-m75 {
+    margin: 75px !important;
+  }
+  .xs-m75-t {
+    margin-top: 75px !important;
+  }
+  .xs-m75-r {
+    margin-right: 75px !important;
+  }
+  .xs-m75-b {
+    margin-bottom: 75px !important;
+  }
+  .xs-m75-l {
+    margin-left: 75px !important;
+  }
+
+  .xs-m80 {
+    margin: 80px !important;
+  }
+  .xs-m80-t {
+    margin-top: 80px !important;
+  }
+  .xs-m80-r {
+    margin-right: 80px !important;
+  }
+  .xs-m80-b {
+    margin-bottom: 80px !important;
+  }
+  .xs-m80-l {
+    margin-left: 80px !important;
+  }
+
+  .xs-m85 {
+    margin: 85px !important;
+  }
+  .xs-m85-t {
+    margin-top: 85px !important;
+  }
+  .xs-m85-r {
+    margin-right: 85px !important;
+  }
+  .xs-m85-b {
+    margin-bottom: 85px !important;
+  }
+  .xs-m85-l {
+    margin-left: 85px !important;
+  }
+
+  .xs-m90 {
+    margin: 90px !important;
+  }
+  .xs-m90-t {
+    margin-top: 90px !important;
+  }
+  .xs-m90-r {
+    margin-right: 90px !important;
+  }
+  .xs-m90-b {
+    margin-bottom: 90px !important;
+  }
+  .xs-m90-l {
+    margin-left: 90px !important;
+  }
+
+  .xs-m95 {
+    margin: 95px !important;
+  }
+  .xs-m95-t {
+    margin-top: 95px !important;
+  }
+  .xs-m95-r {
+    margin-right: 95px !important;
+  }
+  .xs-m95-b {
+    margin-bottom: 95px !important;
+  }
+  .xs-m95-l {
+    margin-left: 95px !important;
+  }
+
+  /*------------------------------------------------------------
+    padding・・・内回りの余白の設定（スマホ）
+    -------------------------------------------------------------*/
+
+  .xs-p0 {
+    padding: 0 !important;
+  } /*周りからのmarginを0にする*/
+  .xs-p0-t {
+    padding-top: 0 !important;
+  } /*上からのmarginが0px*/
+  .xs-p0-r {
+    padding-right: 0 !important;
+  } /*右からのmarginが0px*/
+  .xs-p0-b {
+    padding-bottom: 0 !important;
+  } /*下からのmarginが0px*/
+  .xs-p0-l {
+    padding-left: 0 !important;
+  } /*左からのmarginが0px*/
+
+  .xs-p1 {
+    padding: 1px !important;
+  } /*周りからのmarginが1px*/
+  .xs-p1-t {
+    padding-top: 1px !important;
+  } /*上からのmarginが1px*/
+  .xs-p1-r {
+    padding-right: 1px !important;
+  } /*右からのmarginが1px*/
+  .xs-p1-b {
+    padding-bottom: 1px !important;
+  } /*下からのmarginが1px*/
+  .xs-p1-l {
+    padding-left: 1px !important;
+  } /*左からのmarginが1px*/
+
+  .xs-p2 {
+    padding: 2px !important;
+  } /*周りからのmarginが2px*/
+  .xs-p2-t {
+    padding-top: 2px !important;
+  } /*上からのmarginが2px*/
+  .xs-p2-r {
+    padding-right: 2px !important;
+  } /*右からのmarginが2px*/
+  .xs-p2-b {
+    padding-bottom: 2px !important;
+  } /*下からのmarginが2px*/
+  .xs-p2-l {
+    padding-left: 2px !important;
+  } /*左からのmarginが2px*/
+
+  .xs-p3 {
+    padding: 3px !important;
+  } /*周りからのmarginが3px*/
+  .xs-p3-t {
+    padding-top: 3px !important;
+  } /*上からのmarginが3px*/
+  .xs-p3-r {
+    padding-right: 3px !important;
+  } /*右からのmarginが3px*/
+  .xs-p3-b {
+    padding-bottom: 3px !important;
+  } /*下からのmarginが3px*/
+  .xs-p3-l {
+    padding-left: 3px !important;
+  } /*左からのmarginが3px*/
+
+  .xs-p4 {
+    padding: 4px !important;
+  } /*周りからのmarginが4px*/
+  .xs-p4-t {
+    padding-top: 4px !important;
+  } /*上からのmarginが4px*/
+  .xs-p4-r {
+    padding-right: 4px !important;
+  } /*右からのmarginが4px*/
+  .xs-p4-b {
+    padding-bottom: 4px !important;
+  } /*下からのmarginが4px*/
+  .xs-p4-l {
+    padding-left: 4px !important;
+  } /*左からのmarginが4px*/
+
+  .xs-p5 {
+    padding: 5px !important;
+  } /*周りからのmarginが5px*/
+  .xs-p5-t {
+    padding-top: 5px !important;
+  } /*上からのmarginが5px*/
+  .xs-p5-r {
+    padding-right: 5px !important;
+  } /*右からのmarginが5px*/
+  .xs-p5-b {
+    padding-bottom: 5px !important;
+  } /*下からのmarginが5px*/
+  .xs-p5-l {
+    padding-left: 5px !important;
+  } /*左からのmarginが5px*/
+
+  .xs-p10 {
+    padding: 10px !important;
+  } /*周りからのmarginが10px*/
+  .xs-p10-t {
+    padding-top: 10px !important;
+  } /*上からのmarginが10px*/
+  .xs-p10-r {
+    padding-right: 10px !important;
+  } /*右からのmarginが10px*/
+  .xs-p10-b {
+    padding-bottom: 10px !important;
+  } /*下からのmarginが10px*/
+  .xs-p10-l {
+    padding-left: 10px !important;
+  } /*左からのmarginが10px*/
+
+  .xs-p15 {
+    padding: 15px !important;
+  }
+  .xs-p15-t {
+    padding-top: 15px !important;
+  }
+  .xs-p15-r {
+    padding-right: 15px !important;
+  }
+  .xs-p15-b {
+    padding-bottom: 15px !important;
+  }
+  .xs-p15-l {
+    padding-left: 15px !important;
+  }
+
+  .xs-p20 {
+    padding: 20px !important;
+  }
+  .xs-p20-t {
+    padding-top: 20px !important;
+  }
+  .xs-p20-r {
+    padding-right: 20px !important;
+  }
+  .xs-p20-b {
+    padding-bottom: 20px !important;
+  }
+  .xs-p20-l {
+    padding-left: 20px !important;
+  }
+
+  .xs-p25 {
+    padding: 25px !important;
+  }
+  .xs-p25-t {
+    padding-top: 25px !important;
+  }
+  .xs-p25-r {
+    padding-right: 25px !important;
+  }
+  .xs-p25-b {
+    padding-bottom: 25px !important;
+  }
+  .xs-p25-l {
+    padding-left: 25px !important;
+  }
+
+  .xs-p30 {
+    padding: 30px !important;
+  }
+  .xs-p30-t {
+    padding-top: 30px !important;
+  }
+  .xs-p30-r {
+    padding-right: 30px !important;
+  }
+  .xs-p30-b {
+    padding-bottom: 30px !important;
+  }
+  .xs-p30-l {
+    padding-left: 30px !important;
+  }
+
+  .xs-p35 {
+    padding: 35px !important;
+  }
+  .xs-p35-t {
+    padding-top: 35px !important;
+  }
+  .xs-p35-r {
+    padding-right: 35px !important;
+  }
+  .xs-p35-b {
+    padding-bottom: 35px !important;
+  }
+  .xs-p35-l {
+    padding-left: 35px !important;
+  }
+
+  .xs-p40 {
+    padding: 40px !important;
+  }
+  .xs-p40-t {
+    padding-top: 40px !important;
+  }
+  .xs-p40-r {
+    padding-right: 40px !important;
+  }
+  .xs-p40-b {
+    padding-bottom: 40px !important;
+  }
+  .xs-p40-l {
+    padding-left: 40px !important;
+  }
+
+  .xs-p45 {
+    padding: 45px !important;
+  }
+  .xs-p45-t {
+    padding-top: 45px !important;
+  }
+  .xs-p45-r {
+    padding-right: 45px !important;
+  }
+  .xs-p45-b {
+    padding-bottom: 45px !important;
+  }
+  .xs-p45-l {
+    padding-left: 45px !important;
+  }
+
+  .xs-p50 {
+    padding: 50px !important;
+  }
+  .xs-p50-t {
+    padding-top: 50px !important;
+  }
+  .xs-p50-r {
+    padding-right: 50px !important;
+  }
+  .xs-p50-b {
+    padding-bottom: 50px !important;
+  }
+  .xs-p50-l {
+    padding-left: 50px !important;
+  }
+
+  .xs-p55 {
+    padding: 55px !important;
+  }
+  .xs-p55-t {
+    padding-top: 55px !important;
+  }
+  .xs-p55-r {
+    padding-right: 55px !important;
+  }
+  .xs-p55-b {
+    padding-bottom: 55px !important;
+  }
+  .xs-p55-l {
+    padding-left: 55px !important;
+  }
+
+  .xs-p60 {
+    padding: 60px !important;
+  }
+  .xs-p60-t {
+    padding-top: 60px !important;
+  }
+  .xs-p60-r {
+    padding-right: 60px !important;
+  }
+  .xs-p60-b {
+    padding-bottom: 60px !important;
+  }
+  .xs-p60-l {
+    padding-left: 60px !important;
+  }
+
+  .xs-p65 {
+    padding: 65px !important;
+  }
+  .xs-p65-t {
+    padding-top: 65px !important;
+  }
+  .xs-p65-r {
+    padding-right: 65px !important;
+  }
+  .xs-p65-b {
+    padding-bottom: 65px !important;
+  }
+  .xs-p65-l {
+    padding-left: 65px !important;
+  }
+
+  .xs-p70 {
+    padding: 70px !important;
+  }
+  .xs-p70-t {
+    padding-top: 70px !important;
+  }
+  .xs-p70-r {
+    padding-right: 70px !important;
+  }
+  .xs-p70-b {
+    padding-bottom: 70px !important;
+  }
+  .xs-p70-l {
+    padding-left: 70px !important;
+  }
+
+  .xs-p75 {
+    padding: 75px !important;
+  }
+  .xs-p75-t {
+    padding-top: 75px !important;
+  }
+  .xs-p75-r {
+    padding-right: 75px !important;
+  }
+  .xs-p75-b {
+    padding-bottom: 75px !important;
+  }
+  .xs-p75-l {
+    padding-left: 75px !important;
+  }
+
+  .xs-p80 {
+    padding: 80px !important;
+  }
+  .xs-p80-t {
+    padding-top: 80px !important;
+  }
+  .xs-p80-r {
+    padding-right: 80px !important;
+  }
+  .xs-p80-b {
+    padding-bottom: 80px !important;
+  }
+  .xs-p80-l {
+    padding-left: 80px !important;
+  }
+
+  .xs-p85 {
+    padding: 85px !important;
+  }
+  .xs-p85-t {
+    padding-top: 85px !important;
+  }
+  .xs-p85-r {
+    padding-right: 85px !important;
+  }
+  .xs-p85-b {
+    padding-bottom: 85px !important;
+  }
+  .xs-p85-l {
+    padding-left: 85px !important;
+  }
+
+  .xs-p90 {
+    padding: 90px !important;
+  }
+  .xs-p90-t {
+    padding-top: 90px !important;
+  }
+  .xs-p90-r {
+    padding-right: 90px !important;
+  }
+  .xs-p90-b {
+    padding-bottom: 90px !important;
+  }
+  .xs-p90-l {
+    padding-left: 90px !important;
+  }
+
+  .xs-p95 {
+    padding: 95px !important;
+  }
+  .xs-p95-t {
+    padding-top: 95px !important;
+  }
+  .xs-p95-r {
+    padding-right: 95px !important;
+  }
+  .xs-p95-b {
+    padding-bottom: 95px !important;
+  }
+  .xs-p95-l {
+    padding-left: 95px !important;
+  }
+}
+
+/*------------------------------------------------------------
+
+グリッドレイアウト ver.2021
+
+-------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+
+grid版
+col・・・レスポンシブ　ボックス横並び
+
+-------------------------------------------------------------*/
+
+.grid5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: ;
+  /*
+    grid-gapはデザインによって調整。例として以下に記載。
+    grid-column-gap: 5px;
+    grid-row-gap: 5px; 
+    */
+}
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: ;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: ;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: ;
+}
+
+/* 600px〜999px：タブレット
+------------------------------ */
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  .grid5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* 〜599px：SP横
+------------------------------ */
+@media screen and (max-width: 599px) {
+  .grid5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*------------------------------------------------------------
+
+flexbox版
+col・・・レスポンシブ　ボックス横並び
+
+-------------------------------------------------------------*/
+
+/*------------------------------
+PC:５列　TB:４列　SP:2列
+------------------------------ */
+
+/* 1000px〜：PC
+------------------------------ */
+.col_5 {
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox; /* IE10 */
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap; /* IE10 */
+}
+.col_5 > div,
+.col_5 > li {
+  width: 20%;
+}
+.col_5 > div > div,
+.col_5 > div > li,
+.col_5 > li > div,
+.col_5 > li > li {
+  position: relative;
+  overflow: hidden;
+}
+/* 600px〜999px：タブレット
+------------------------------ */
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  .col_5 > div,
+  .col_5 > li {
+    width: 25%;
+  }
+}
+/* 〜599px：SP横
+------------------------------ */
+@media screen and (max-width: 599px) {
+  .col_5 > div,
+  .col_5 > li {
+    width: 50%;
+  }
+}
+
+/*------------------------------
+PC:４列　TB:３列　SP:２列
+------------------------------ */
+
+/* 1000px〜：PC
+------------------------------ */
+.col_4 {
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox; /* IE10 */
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap; /* IE10 */
+}
+.col_4 > div,
+.col_4 > li {
+  width: 25%;
+}
+
+/* 600px〜999px：タブレット
+------------------------------ */
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  .col_4 > div,
+  .col_4 > li {
+    width: 33.33333%;
+  }
+}
+/* 〜599px：SP横
+------------------------------ */
+@media screen and (max-width: 599px) {
+  .col_4 > div,
+  .col_4 > li {
+    width: 50%;
+  }
+}
+
+/*------------------------------
+PC:３列　TB:２列　SP:１列
+------------------------------ */
+
+/* 1000px〜：PC
+------------------------------ */
+.col_3 {
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox; /* IE10 */
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap; /* IE10 */
+}
+.col_3 > div,
+.col_3 > li {
+  width: 33.33333%;
+}
+
+/* 600px〜999px：タブレット
+------------------------------ */
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  .col_3 > div,
+  .col_3 > li {
+    width: 50%;
+  }
+}
+/* 〜599px：SP横
+------------------------------ */
+@media screen and (max-width: 599px) {
+  .col_3 > div,
+  .col_3 > li {
+    width: 100%;
+  }
+}
+
+/*------------------------------
+PC:２列　TB:２列　SP:１列
+------------------------------ */
+
+/* 1000px〜：PC
+------------------------------ */
+.col_2 {
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox; /* IE10 */
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap; /* IE10 */
+}
+.col_2 > div,
+.col_2 > li {
+  width: 50%;
+}
+
+/* 600px〜999px：タブレット
+------------------------------ */
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  .col_2 > div,
+  .col_2 > li {
+    width: 50%;
+  }
+}
+/* 〜599px：SP横
+------------------------------ */
+@media screen and (max-width: 599px) {
+  .col_2 > div,
+  .col_2 > li {
+    width: 100%;
+  }
+}
