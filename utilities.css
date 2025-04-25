@@ -962,6 +962,9 @@ input[type="checkbox"] {
 font-size・・・フォントのサイズ
 -------------------------------------------------------------*/
 
+.f08 {
+  font-size: 0.8rem !important;
+}
 .f09 {
   font-size: 0.9rem !important;
 }
@@ -1049,6 +1052,9 @@ font-size・・・フォントのサイズ
 .f45 {
   font-size: 4.5rem !important;
 }
+.f80 {
+  font-size: 80% !important;
+}
 .f120 {
   font-size: 120% !important;
 }
@@ -1057,6 +1063,9 @@ font-size・・・フォントのサイズ
 }
 
 @media (max-width: 767px) {
+ .f08 {
+  font-size: 0.8rem !important;
+}
   .f09 {
     font-size: 0.9rem !important;
   }
