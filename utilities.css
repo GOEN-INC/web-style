@@ -20,8 +20,8 @@ font-feature-settings: "palt";
 }
 
 .required{
-	color:#ff000;
-	font-size:80%;
+	color:#ff000 !important;
+	font-size:80% !important;
 }
 
 /*------------------------------------------------------------
