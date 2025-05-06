@@ -4258,3 +4258,28 @@ PC:２列　TB:２列　SP:１列
     width: 100%;
   }
 }
+
+/*-------------------------------
+
+テンプレートへの共通追加CSS
+
+-------------------------------*/
+
+/*WPform フォーム調整*/
+
+.wpforms-field-container .wpforms-field{
+	padding:0;
+}
+.wpforms-field-container .wpforms-field+.wpforms-field
+{
+	margin-top:20px;
+}
+.wpforms-field-container .wpforms-field select{
+	min-height:43px;
+}
+.wpforms-field-checkbox.privacy_box{
+	text-align:center;
+}
+.wpforms-field-checkbox.privacy_box a{
+	text-decoration:underline;
+}
