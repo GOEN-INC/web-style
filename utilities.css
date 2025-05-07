@@ -4283,6 +4283,13 @@ PC:２列　TB:２列　SP:１列
 .wpforms-field-checkbox.privacy_box a{
 	text-decoration:underline;
 }
+.wpforms-submit{
+width:280px !important;
+    border-radius: 10px 10px 10px 10px !important;
+    padding: 20px 20px 20px 20px !important;
+    margin-top: 50px !important;
+    font-size: 1.2rem !important;
+}
 
 
 /*エントリーフォーム調整*/
@@ -4297,7 +4304,7 @@ text-align:left;
 }
 
 .entry_form ul li + li{
-	margin-top:20px;
+	margin-top:40px;
 }
 .entry_form .privacy_cehck{
         margin-top:30px;
