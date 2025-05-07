@@ -29,7 +29,14 @@
 	}
 }
 
-
+/* ページトップボタン　スマホ調整 */
+@media(max-width:767px){
+.ast-scroll-to-top-right {
+    right: 15px;
+    bottom: 70px;
+}
+}
+	
 /*問い合わせページフォーム調整*/
 .wpforms-submit{
 background-color: var(--ast-global-color-0) !important;
