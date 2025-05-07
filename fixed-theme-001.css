@@ -30,6 +30,16 @@
 }
 
 
+/*問い合わせページフォーム調整*/
+.wpforms-submit{
+background-color: var(--ast-global-color-0) !important;
+color:var(--wp--preset--color--ast-global-color-5) !important;
+}
+
+.wpforms-submit:hover{
+background-color:var(--e-global-color-astglobalcolor2) !important;
+}
+
 
 /*-------------------------------
 
