@@ -4295,30 +4295,17 @@ width:280px !important;
 }
 
 
-/*エントリーフォーム調整*/
-.entry_form ul{
-	list-style:none;
-	padding:0;
+/*contact form 7 スタイル調整*/
+.wpcf7 .privacy_check p{
+	display:flex !important;
+	justify-content:center;
 }
-
-.entry_form ul li p{
-text-align:left;
-	width:100%;
+.wpcf7 .privacy_check .wpcf7-form-control-wrap{
+	width:fit-content !important;
 }
-
-.entry_form ul li + li{
-	margin-top:40px;
-}
-.entry_form .privacy_cehck{
-        margin-top:30px;
-        padding-top:30px;
-        margin-bottom:0;
-}
-.entry_form .privacy_cehck p{
-        display: flex !important;
-        gap:5px;
-        justify-content: center;
-}
-.entry_form .privacy_cehck p .wpcf7-form-control-wrap{
-	width: auto;
+.wpcf7 .submit_btn p{
+	 display:flex !important;
+	justify-content:center;
+	flex-direction:column;
+	width:280px;
 }
