@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/*-------------------------------
+
+テンプレート共通
+
+-------------------------------*/
+
+/*アンカーリンク調整*/
+:target {
+	scroll-margin-top: 80px; /* ヘッダーの高さに合わせて調整 */
+  }
+
+
+/* ページトップボタン　スマホ調整 */
+#ast-scroll-top{
+	z-index:2 !important;
+}
+@media(max-width:767px){
+.ast-scroll-to-top-right {
+    right: 15px;
+    bottom: 70px;
+}
+}
+
+/*　ハンバーガーメニュー　サイズ調整　*/
+.ham_menu .hfe-nav-menu-icon{
+	padding: 15px;
+	width:80px;
+	height: 80px;
+	display:flex;
+	align-items:center;
+	justify-content:center !important;
+}
+@media(max-width:767px){
+.ham_menu .hfe-nav-menu-icon{
+	width:50px;
+	height: 50px;
+}
+}
+
+
+/*-------------------------------
+
+採用サイト用
+
+-------------------------------*/
+
+/*募集要項ページ*/
+
+.single-recruit .ast-post-format-{
+	max-width:710px;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.single-recruit .entry-meta{
+	display:none;
+}
+.recruit_table table{
+	margin:0;
+}
+.recruit_table table tr td{
+	padding:20px;
+}
+
+.recruit_table table tr td:first-child{
+	width:25%;
+	background-color:var(--ast-global-color-7);
+	font-weight:700;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	〜767px：SP横
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+@media screen and (max-width:767px) {
+	.recruit_table table,
+	.recruit_table table tr,
+	.recruit_table table tr td{
+		border:0;
+		width:100% !important;
+	}
+	.recruit_table table tr td{
+	padding:0px;
+}
+	.recruit_table table tr{
+		display:flex;
+		flex-direction:column;
+		padding-bottom:10px;
+		border-bottom:1px dotted var(--ast-global-color-0);
+			margin-bottom:10px;
+	}
+	.recruit_table table tr td:first-child{
+	background-color:var(--ast-global-color-7);
+	background-color:transparent;
+	
+}
+}
