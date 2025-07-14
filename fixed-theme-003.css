@@ -39,6 +39,10 @@
 }
 }
 
+/* お知らせページデザイン調整 */
+.ast-related-posts-wrapper img{
+	border-radius:15px;
+}
 
 /*-------------------------------
 
